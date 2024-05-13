@@ -8,7 +8,7 @@ function Main() {
   const [active, setActive] = useState(false);
   const [games, setGames] = useState([]);
 
-  const handelToggleActive = () => {
+  const handleToggleActive = () => {
     setActive(!active);
   };
 
@@ -29,7 +29,7 @@ function Main() {
     <main>
       <SideMenu active={active}/>
       <div className={`banner ${active ? 'active' : undefined}`}>
-        <Header toggleActive={handelToggleActive}/>
+        <Header toggleActive={handleToggleActive}/>
         <div className="container-fluid">
           <Home games={games} />
         </div>
