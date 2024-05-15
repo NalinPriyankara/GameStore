@@ -7,9 +7,9 @@ main {
     padding: 30px;
     border: 8px solid var(--bgColor);
     background: var(--bgColor);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.15),
+    box-shadow: -5px -5px 15px rgba(3, 226, 255, 0.2),
         5px 5px 15px rgba(0, 0, 0, 0.35),
-        inset -5px -5px 15px rgba(255, 255, 255, 0.15),
+        inset -5px -5px 15px rgba(3, 226, 255, 0.2),
         inset 5px 5px 15px rgba(0, 0, 0, 0.35);
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ main {
     border-radius: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: var(--bgColor);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    box-shadow: -5px -5px 15px rgba(3, 226, 255, 0.2),
         5px 5px 15px rgba(0, 0, 0, 0.35);
     transition: 1s;
 }

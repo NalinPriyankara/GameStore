@@ -5,7 +5,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     background: var(--bgColor);
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    box-shadow: -5px -5px 15px rgba(3, 226, 255, 0.2),
         5px 5px 15px rgba(0, 0, 0, 0.35);
     display: flex;
     flex-direction: column;
@@ -52,7 +52,7 @@
 
 .sideMenu .nav li a:hover,
 .sideMenu .nav li a.active {
-    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
+    box-shadow: -5px -5px 15px rgba(3, 226, 255, 0.2),
         5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 
