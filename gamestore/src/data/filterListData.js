@@ -15,18 +15,28 @@ const filterListData = [
         active: false
     },
     {
-        _id: 1,
+        _id: 4,
         name: 'Battle',
         active: false
     },
     {
-        _id: 1,
+        _id: 5,
         name: 'Racing',
         active: false
     },
     {
-        _id: 1,
+        _id: 6,
         name: 'Fighting',
+        active: false
+    },
+    {
+        _id: 7,
+        name: 'Survival',
+        active: false
+    },
+    {
+        _id: 8,
+        name: 'Action',
         active: false
     }
 ];
