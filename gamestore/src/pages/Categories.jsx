@@ -17,7 +17,23 @@ function Categories({ games, reference }) {
         return filter;
       })
     );
-  }
+
+    if (category === 'All') {
+      setData(games);
+      return;
+    }
+    setData(games.filter(game => game.category === category));
+  };
+
+  const [text, setText] = useState('');
+
+  const handleSearchGames = e => {
+    setData(
+      games.filter(game => 
+        game.title.toLowerCase().includes(e.target.value.toLowerCase())))
+    setText(e.target.value);
+  };
+
   return (
     <section id="categories" className='categories' ref={reference}>
       <div className="container-fluid mt-2">
@@ -38,12 +54,18 @@ function Categories({ games, reference }) {
           <div className="col-lg-4 d-flex align-items-center justify-content-end">
             <div className="search">
               <i class="bi bi-search"></i>
-              <input type="text" name="search" placeholder='Search' />
+              <input 
+                type="text" 
+                name="search" 
+                value={text}
+                placeholder='Search' 
+                onChange={handleSearchGames} 
+              />
             </div>
           </div>
         </div>
         <div className="row">
-          {games.map(game=>(
+          {data.map(game=>(
             <GameCard key={game._id} game={game} />
           ))}
         </div>
