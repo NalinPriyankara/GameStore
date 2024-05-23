@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './bag.css';
 import ShopBagItem from '../components/ShopBagItem';
 
 function Bag({ games, reference }) {
+  const [total, setTotal] = useState(0);
+
+  const handleTotalPayment = () => {
+    return games
+    .map(game => game.price * (1 - game.discount))
+    .reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+    .toFixed(2);
+  };
+
+  useEffect(() => {
+    setTotal(handleTotalPayment());
+  },[games]);
+
   return (
     <section id="bag" className='bag' ref={reference}>
         <div className="container-fluid">
@@ -34,6 +47,19 @@ function Bag({ games, reference }) {
                       ))}
                     </tbody>
                   </table>
+                </div>
+              </div>
+              <div className="row d-flex justify-content-between mt-5">
+                <div className="col-lg-2 d-flex align-items-center">
+                  <p className="itemCount">Total Items : {games.length}</p>
+                </div>
+                <div className="col-lg-10 d-flex justify-content-end">
+                  <div className="payment">
+                    Total : ${total}
+                    <a href='#'>
+                      Check out <i className="bi bi-wallet-fill"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
             </>

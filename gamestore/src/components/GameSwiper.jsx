@@ -33,10 +33,10 @@ function GameSwiper({games}) {
           modifier: 1,
           slideShadows: true,
         }}
-        // autoplay = {{
-        //   delay: 2500,
-        //   disableOnInteration: false,
-        // }}
+        autoplay = {{
+          delay: 2500,
+          disableOnInteration: false,
+        }}
         modules = {[EffectCoverflow, Navigation, Autoplay]}
         className="gameSwiper"
         >
